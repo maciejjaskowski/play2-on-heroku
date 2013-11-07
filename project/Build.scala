@@ -1,6 +1,7 @@
 import sbt._
 import Keys._
 import play.Project._
+import com.typesafe.sbt.SbtStartScript
 
 object ApplicationBuild extends Build {
 
@@ -16,14 +17,17 @@ object ApplicationBuild extends Build {
     "org.webjars" % "bootstrap" % "3.0.0",
     "org.webjars" % "knockout" % "2.3.0",
     "org.webjars" % "requirejs" % "2.1.8"
+    
   
-    // Add your own project dependencies in the form:
-    // "group" % "artifact" % "version"
+    // Add your own project dependencies in the form:    
   )
+   
+  seq(SbtStartScript.startScriptForWarSettings: _*)
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here
     scalaVersion := "2.10.2"
+    
   )
 
 }
