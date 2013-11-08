@@ -1,7 +1,6 @@
 import sbt._
 import Keys._
 import play.Project._
-import com.typesafe.sbt.SbtStartScript
 
 object ApplicationBuild extends Build {
 
@@ -22,7 +21,6 @@ object ApplicationBuild extends Build {
     // Add your own project dependencies in the form:    
   )
    
-  seq(SbtStartScript.startScriptForWarSettings: _*)
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
     // Add your own project settings here
