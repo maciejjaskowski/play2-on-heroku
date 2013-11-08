@@ -1,17 +1,16 @@
 import controllers.MessageController
 import models.Message
 import services.MessageDao
-
 import org.specs2.mutable.Specification
 import MongoDBTestUtils._
-
 import play.api.libs.json.Json
 import play.api.test._
 import play.api.test.Helpers._
 import reactivemongo.bson.BSONObjectID
-
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
+import org.junit.runner._
+import org.specs2.runner._
 
 object MessageControllerSpec extends Specification {
 

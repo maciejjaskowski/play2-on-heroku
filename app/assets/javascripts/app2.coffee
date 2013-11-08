@@ -32,7 +32,7 @@ require(["webjars!knockout.js", 'webjars!jquery.js', "/routes.js", "webjars!boot
 
       # get the messages
       @getMessages = () ->
-        @ajax(routes.controllers.MessageController.getMessages(0, messagesPerPage))
+        @ajax(routes.controllers.MessageControlle.getMessages(0, messagesPerPage))
           .done((data, status, xhr) ->
             self.loadMessages(data, status, xhr)
           )

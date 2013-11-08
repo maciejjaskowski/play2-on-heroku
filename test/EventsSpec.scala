@@ -7,8 +7,11 @@ import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import services.{EventDao, MessageDao}
 import MongoDBTestUtils.withMongoDb
+import org.junit.runner.RunWith
+import org.specs2.runner.JUnitRunner
 
-object EventsSpec extends Specification {
+
+class EventsSpec extends Specification {
 
   "Events" should {
 
